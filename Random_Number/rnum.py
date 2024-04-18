@@ -1,18 +1,18 @@
 # random number generator integer in the range 1 to 10
 
-# import random
-# random.randint(1, 10)
+import random
+random.randint(1, 10)
 
-# for _ in range(10):
-#     print(random.randint(1, 10))
+for _ in range(10):
+    print(random.randint(1, 10))
 
 
 
 # seed() method
 # The seed() method is used to initialize the random number generator. The random number generator needs a number to start with (a seed value), to be able to generate a random number.
 
-# random.seed(10)
-# print(random.randint(1, 10))
+random.seed(10)
+print(random.randint(1, 10))
 
 
 
@@ -29,3 +29,13 @@ while i < 10:
         counter += 1
 print(_list) # list of random numbers
 print(counter) # number of iterations
+
+
+
+# Random Number Generator
+import random as rnd
+_list = [1, 4, 6,6, 7, 8, 9,5, 9, 10]
+for i in range(9):
+    new = rnd.randint(i, 9)
+    _list[i], _list[new] = _list[new], _list[i]
+    print(_list)
